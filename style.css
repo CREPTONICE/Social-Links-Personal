@@ -85,22 +85,21 @@ body {
         box-shadow 0.2s ease-in-out;
 }
 
-.btn:hover {
+.btn:hover cursor {
     background-color: #C4F82A;
-    color: #141414;
+    color: #b9b6b6;
     font-size: 0.9rem;
     scale: 1.1;
     box-shadow: 0 0px 50px 0 #c5f82a1d, 0 0px 50px 0 #c5f82a65;
 }
 
-.Links:hover .wrapper:not(:hover) {
+.Links:hover .wrapper:not(:hover) cursor {
     filter: grayscale(0.5) blur(1px);
 }
 
 .white {
     color: #fff;
 }
-
 
 @media (max-width: 1260px) {
 
