@@ -13,34 +13,35 @@
 body {
     background-color: #141414;
     font-family: poppins, sans-serif;
+    height: 100vh;
+    position: relative;
 }
 
 .Box {
     background-color: #1F1F1F;
-    width: 450px;
-    height: 530px;
-    max-width: 90%;
-    margin-inline: auto;
-    margin-top: 20vh;
+    width: 20%;
+    height: fit-content;
     border-radius: 20px;
+    padding: 1em 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.Personal__info{
+.Personal__info {
     text-align: center;
 }
 
 .pp {
     border-radius: 50%;
-    margin-top: 2rem;
     width: 100px;
-    height: 100px;
 }
 
 .name {
     font-size: 2rem;
     font-weight: 700;
     padding-bottom: 0.3rem;
-    transition: font-size 1 ease-in-out;
 }
 
 .location {
@@ -60,7 +61,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .wrapper {
@@ -72,23 +72,70 @@ body {
     border-style: none;
     cursor: pointer;
     border-radius: 10px;
-    padding: 1em 2em;
+    padding: 1.2em 1em;
     background-color: #333333;
     font-weight: 700;
-    width: 80%;
+    width: 70%;
     margin-inline: auto;
-    transition: width 0.4s ease-in-out, background-color 0.3s,
-     border-raduis 0.5s linear, font-size 0.4s  ;
+    transition:
+        background-color 0.3s ease-in-out,
+        scale 0.5s linear,
+        font-size 0.4s ease-in-out,
+        color 0.4s linear,
+        box-shadow 0.2s ease-in-out;
 }
 
 .btn:hover {
     background-color: #C4F82A;
     color: #141414;
-    width: 90%;
-    font-size: 1rem;
-    border-radius: 15px;
+    font-size: 0.9rem;
+    scale: 1.1;
+    box-shadow: 0 0px 50px 0 #c5f82a1d, 0 0px 50px 0 #c5f82a65;
+}
+
+.Links:hover .wrapper:not(:hover) {
+    filter: grayscale(0.5) blur(1px);
 }
 
 .white {
     color: #fff;
+}
+
+
+@media (max-width: 1260px) {
+
+    .Box {
+        width: 30%;
+    }
+}
+
+@media (max-width: 840px) { 
+
+    .Box {
+        width: 40%;
+    }
+}
+
+@media (max-width: 630px) { 
+
+    .Box {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 375px) { 
+
+    .Box {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 320px) { 
+
+    .Box {
+        width: 90%;
+    }
+
 }
