@@ -101,21 +101,22 @@ body {
     color: #fff;
 }
 
-@media (max-width: 1260px) {
-
-    .Box {
-        width: 30%;
-    }
-}
-
-@media (max-width: 840px) { 
+@media (max-width: 1300px) {
 
     .Box {
         width: 40%;
     }
 }
 
-@media (max-width: 630px) { 
+@media (max-width: 680px) {
+
+    .Box {
+        width: 55%;
+    }
+
+}
+
+@media (max-width: 550px) {
 
     .Box {
         width: 70%;
@@ -123,18 +124,26 @@ body {
 
 }
 
-@media (max-width: 375px) { 
+@media (max-width: 400px) {
 
     .Box {
-        width: 80%;
+        width: 85%;
     }
 
 }
 
-@media (max-width: 320px) { 
+@media (max-width: 320px) {
 
     .Box {
-        width: 90%;
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    .Box {
+        width: 100%;
     }
 
 }
