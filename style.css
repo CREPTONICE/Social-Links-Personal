@@ -1,152 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oxanium:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+:root {
+  --Green: hsl(75, 94%, 57%);
+
+  --White: hsl(0, 0%, 100%);
+
+  --Grey--700: hsl(0, 0%, 20%);
+  --Grey--800: hsl(0, 0%, 12%);
+  --Grey--900: hsl(0, 0%, 8%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #141414;
-    font-family: poppins, sans-serif;
-    height: 100vh;
-    position: relative;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Grey--900);
 }
 
-.Box {
-    background-color: #1F1F1F;
-    width: 20%;
-    height: fit-content;
-    border-radius: 20px;
-    padding: 1em 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.Personal__info {
-    text-align: center;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.pp {
-    padding-top: 0.5em;
+.box {
+  background-color: var(--Grey--800);
+  padding: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--White);
+  border-radius: 10px;
+  animation: float 5s infinite ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+  img {
     border-radius: 50%;
     width: 100px;
+    margin-inline: auto;
+    margin-top: 0.5rem;
+  }
 }
 
 .name {
-    font-size: 2rem;
-    font-weight: 700;
-    padding-bottom: 0.3rem;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
-.location {
-    color: #C4F82A;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding-bottom: 1.7rem;
+.title {
+  color: var(--Green);
+  font-weight: 600;
+  margin-top: 3px;
 }
 
-.desccription {
-    font-size: 1rem;
-    padding-bottom: 1.5rem;
-    letter-spacing: 0px;
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
-.Links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 0.5em;
+.links__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0rem 0.5rem;
 }
 
-.wrapper {
-    width: 90%;
-    text-align: center;
+.links {
+  font-weight: 600;
+  width: 100%;
+  padding: 1em 1em;
+  border-radius: 10px;
+  background-color: var(--Grey--700);
+  transition: all 0.3s ease-in-out;
+  animation: float-small 5s infinite ease-in-out;
+  animation-delay: 0.6s;
 }
 
-.btn {
-    border-style: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 1.2em 1em;
-    background-color: #333333;
-    font-weight: 700;
-    width: 70%;
-    margin-inline: auto;
-    transition:
-        background-color 0.3s ease-in-out,
-        scale 0.5s linear,
-        font-size 0.4s ease-in-out,
-        color 0.4s linear,
-        box-shadow 0.2s ease-in-out;
+.links:hover {
+  background-color: var(--Green);
+  color: #000;
 }
 
-.btn:hover {
-    background-color: #C4F82A;
-    color: #141414;
-    font-size: 0.9rem;
-    scale: 1.1;
-    box-shadow: 0 0px 50px 0 #c5f82a1d, 0 0px 50px 0 #c5f82a65;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px) scale(1.01);
+  }
 }
 
-.Links:hover .wrapper:not(:hover) {
-    filter: grayscale(0.5) blur(1px);
-}
+@keyframes float-small {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-.white {
-    color: #fff;
-}
-
-@media (max-width: 1300px) {
-
-    .Box {
-        width: 40%;
-    }
-}
-
-@media (max-width: 680px) {
-
-    .Box {
-        width: 55%;
-    }
-
-}
-
-@media (max-width: 550px) {
-
-    .Box {
-        width: 70%;
-    }
-
-}
-
-@media (max-width: 400px) {
-
-    .Box {
-        width: 85%;
-    }
-
-}
-
-@media (max-width: 320px) {
-
-    .Box {
-        width: 95%;
-    }
-
-}
-
-@media (max-width: 300px) {
-
-    .Box {
-        width: 100%;
-    }
-
+  50% {
+    transform: translateY(-5px);
+  }
 }
